@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Sharif Sikder</h1>
+    </header>
+    <main>
+        <section id = 'blogs'>
+
+            <ul id= 'blog-list'>
+                <li>Blog 1</li>
+                <li>Blog 2</li>
+                <li>Blog 3</li>
+                <li>Blog 4</li>
+            </ul>
+            <article class= 'blog'>
+                <h3>My Awesome Blog -1</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo sed deleniti ipsam laboriosam velit! Quibusdam quae obcaecati sequi, ea enim dolores non quo voluptates quam eveniet hic vitae excepturi pariatur!</p>
+            </article>
+            <article>
+                <h3 id ='second-title'>My Awesome Blog -2</h3>
+                <p>Ducimus natus culpa voluptatibus excepturi quam exercitationem fugiat, dignissimos aliquid eaque nobis rem labore, soluta voluptatem est. Repudiandae, natus? Delectus rem ipsum similique! Non impedit deserunt molestias nisi consequuntur cumque.</p>
+            </article>
+            <article class= 'blog'>
+                <h3 id='third-title'>My Awesome Blog -3</h3>
+                <p>Sit reprehenderit dignissimos optio nemo ratione id quod voluptates quos, eveniet fugit beatae laboriosam exercitationem veritatis, unde sed ea quam incidunt perspiciatis commodi accusantium magni eius. Voluptatem voluptatum porro nam?</p>
+            </article>
+
+            <article class= 'blog'>
+                <h3 id = 'fourth-title'>My Awesome Blog -4</h3>
+                <p>Sit reprehenderit dignissimos optio nemo ratione id quod voluptates quos, eveniet fugit beatae laboriosam exercitationem veritatis, unde sed ea quam incidunt perspiciatis commodi accusantium magni eius. Voluptatem voluptatum porro nam?</p>
+            </article>
+
+        </section>
+    </main>
+    
+    <script>
+
+        const student = {name :'kissmot Ali', age: 16, height:60}
+        // console.log(document.body)
+        const blogTitles = document.getElementsByTagName('h3');
+        for(const h3 of blogTitles){
+            console.log(h3.innerText)
+        }
+
+        const blogDetails = document.getElementsByTagName('p');
+        for(const p of blogDetails){
+            console.log(p)
+        }
+
+        const secondTitle = document.getElementById('second-title');
+        secondTitle.style.color = 'white';
+        secondTitle.style.backgroundColor = 'salmon';
+        secondTitle.style.textAlign = 'center';
+        secondTitle.style.padding = '15px';
+        secondTitle.style.fontSize = '30px';
+        secondTitle.style.borderRadius = '10px';
+
+        const thirdTitle = document.getElementById('third-title');
+        thirdTitle.style.color = 'white';
+        thirdTitle.style.backgroundColor = 'black';
+        thirdTitle.style.padding = '20px';
+        thirdTitle.style.fontSize = '40px';
+        thirdTitle.style.borderRadius = '10px';
+        thirdTitle.style.display = 'inline-block';
+
+
+     
+
+         
+       const li = document.createElement('li');
+       li.innerText = 'Blog 5';
+
+       const ul = document.getElementById('blog-list')
+    
+       ul.appendChild(li);
+
+       const article = document.createElement('article');
+       article.classList.add('blog')
+
+       const h3 = document.createElement('h3');
+       h3.innerText = 'My Awesome Blogs';
+       const p = document.createElement('p');
+       p.innerText = 'Sit reprehenderit dignissimos optio nemo ratione id quod voluptates quos, eveniet fugit beatae laboriosam exercitationem veritatis, unde sed ea quam incidunt perspiciatis commodi accusantium magni eius. Voluptatem voluptatum porro nam?';
+       article.appendChild(h3);
+       article.appendChild(p);
+
+       const blogSection = document.getElementById('blogs');
+       blogSection.appendChild(article);
+
+
+
+
+       const blogs =document.getElementsByClassName('blog');
+        for(const blog of blogs){
+            blog.style.border = '2px solid orange';
+            blog.style.padding = '20px 10px';
+            blog.style.borderRadius = '10px';
+            blog.style.margin = '20px'
+        }
+
+    </script>
+ 
+</body>
+</html>
